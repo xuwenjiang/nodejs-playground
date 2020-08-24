@@ -4,16 +4,16 @@ sayHello();
 
 // define arrow function a
 const a = (param, param2) => {
-  console.log('arrow ' + param2);
+  console.log('arrow function a ' + param2);
 }
 
 // define arrow function b and call it
 const b = w => console.log(w);
 
-b('See? I am w');
+b('See? I am arrow function b\'s w');
 
 // set a callback, it is ut in the "Message Queue"
-setTimeout(() => {console.log('timeout')}, 0);
+setTimeout(() => {console.log('timeout called after job queue')}, 0);
 
 // ECMAScript 2015 introduced "Job Queue", which is used by Promises (will exectute as soon as possible)
 // so it is before above callback.  and that is a big difference
