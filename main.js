@@ -1,5 +1,6 @@
 // import function and call it
 import {sayHello} from './hello.js';
+
 sayHello();
 
 // define arrow function a
@@ -42,3 +43,39 @@ checkIfItsDone()
 
 // call previously defined arrow function a.
 a(1,2);
+
+
+// promises were introduced to solve callback hell problem. but still complexity on their own
+const doSomethingAsync = () => {
+  return new Promise(resolve => {
+    setTimeout(() => resolve('I did something'), 1000)
+  })
+}
+
+const doSomething = async () => {
+  console.log('In function before');
+  // from what I see here, it will block following lines, "in function after" will berendered after await.
+  console.log(await doSomethingAsync());
+  console.log('In function after');
+}
+
+console.log('Before')
+doSomething()
+console.log('After')
+
+
+// Prepending the async keyword to any function means that the function will return a promise.
+// Even if it's not doing so explicitly, it will internally make it return a promise
+const alert = (x) => {console.log(x);}
+
+const aFunction = async () => {
+  return 'a function'
+}
+aFunction().then(alert) 
+
+
+const bFunction = async () => {
+  return Promise.resolve('b function')
+}
+bFunction().then(alert) // This will alert 'test'
+

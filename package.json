@@ -4,13 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "cowsay": "npx cowsay -f lamb Hello World"
   },
   "type": "module",
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cowsay": "^1.4.0"
+    "@babel/preset-env": "^7.11.0",
+    "babel-jest": "^26.3.0",
+    "cowsay": "^1.4.0",
+    "jest": "^26.4.2"
   }
 }

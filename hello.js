@@ -1,5 +1,9 @@
 function sayHello() {
-  console.log('Hello');
+  console.log(returnHello());
 }
 
-export { sayHello }
+function returnHello() {
+  return 'Hello';
+}
+
+export { returnHello, sayHello }
