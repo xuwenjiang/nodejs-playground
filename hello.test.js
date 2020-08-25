@@ -1,6 +1,5 @@
-import { returnHello } from './hello'
+const hello = require('./hello')
 
 test('return hello', () => {
-    expect(returnHello()).toBe('Hello');
-});
-  
+    expect(hello.returnHello()).toBe('Hello');
+})

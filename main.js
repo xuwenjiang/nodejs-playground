@@ -1,7 +1,7 @@
 // import function and call it
-import {sayHello} from './hello.js';
+const hello = require('./hello')
 
-sayHello();
+hello.sayHello();
 
 // define arrow function a
 const a = (param, param2) => {

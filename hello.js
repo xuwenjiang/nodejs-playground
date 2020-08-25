@@ -6,4 +6,5 @@ function returnHello() {
   return 'Hello';
 }
 
-export { returnHello, sayHello }
+exports.sayHello = sayHello
+exports.returnHello = returnHello
